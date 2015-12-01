@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
   root 'pages#index'
   
-  #get 'C:\Users\Bruno\Workspace\maquinaVirtual\pagno\app\views\maps', to: 'maps#iframe'
+get 'login' => 'login#index'
+get 'jawbone' => 'login#jawboneLogin'
+get 'jawbone/logged' => 'login#jawboneLogged'
 
-#  get 'C:\Users\Bruno\Workspace\maquinaVirtual\pagno\app\views\login', to: 'login#frame'
+get 'maps' => 'maps#index'
 
-#  get 'C:\Users\Bruno\Workspace\maquinaVirtual\pagno\app\views\login\jawbone', to: 'jawbone#frame'
-
-#  get 'C:\Users\Bruno\Workspace\maquinaVirtual\pagno\app\views\jawboneLogged', to: 'jawbonelogged#iframe'
-
-  resources :login,:people,:maps,:jawbone,:jawbonelogged, only: [:index, :show]
+  resources :people, only: [:index, :show]
 
 
 end
