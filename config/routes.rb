@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
 get 'login' => 'login#index'
 get 'jawbone' => 'login#jawboneLogin'
-get 'jawbone/logged' => 'login#jawboneLogged'
+get 'logged' => 'login#jawboneLogged'
 
 get 'maps' => 'maps#index'
 
